@@ -2,7 +2,7 @@
 
 **Versão:** 1.4  
 **Data:** 10 de Outubro de 2025  
-**Autor:** (Seu Nome)
+**Autor:** Iuri Nascimento Santos
 
 ### 1. Visão Geral
 
@@ -79,7 +79,3 @@ O processo é dividido em três camadas:
 * **Tripla Repetição**: É gerenciada pela função `generateFEN()`, que cria uma representação textual única e completa da posição atual (peças, turno, direitos de roque, alvo *en passant*). Após cada jogada, este "hash" é armazenado e sua contagem é incrementada na tabela `gameState.history`. A função `checkEndGame()` verifica se a contagem para a posição atual atingiu 3.
 
 * **Xeque-Mate e Afogamento**: A detecção ocorre em `checkEndGame()`. A função itera sobre todas as peças do jogador do turno atual e tenta gerar movimentos válidos com `getTrulyValidMoves()`. Se nenhuma peça consegue gerar um único movimento válido, o jogo terminou. O resultado (xeque-mate ou afogamento) é determinado verificando se o rei está em xeque no momento.
-
-### 4. Conclusão
-
-O projeto implementa com sucesso uma simulação de xadrez utilizando uma arquitetura robusta de gerenciamento de estado e validação de regras. A estrutura modular das funções de lógica permite fácil manutenção e a adição de futuras funcionalidades, como uma IA adversária ou a regra dos 50 movimentos.
